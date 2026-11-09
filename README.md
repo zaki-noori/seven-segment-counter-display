@@ -53,9 +53,23 @@ f = C'B' + C'A + D'B'
 g = DC + C'A + B'A
 ```
 
-| Truth table | K-maps (counter next state) |
-|---|---|
-| ![Truth table](docs/truth-table.png) | ![K-maps](docs/kmaps.png) |
+### Truth table
+
+![Truth table](docs/truth-table.png)
+
+### Counter K-maps (D flip-flop next state)
+
+![Counter K-maps](docs/counter-kmaps.png)
+
+### Segment K-maps (decoder a–g)
+
+Counts 0–4 are never displayed, so they're treated as don't-cares (X) to get simpler expressions.
+
+| | | |
+|---|---|---|
+| ![Segment a](docs/segment-kmaps/segment-a.png) | ![Segment b](docs/segment-kmaps/segment-b.png) | ![Segment c](docs/segment-kmaps/segment-c.png) |
+| ![Segment d](docs/segment-kmaps/segment-d.png) | ![Segment e](docs/segment-kmaps/segment-e.png) | ![Segment f](docs/segment-kmaps/segment-f.png) |
+| ![Segment g](docs/segment-kmaps/segment-g.png) | | |
 
 ## Files
 
@@ -65,7 +79,7 @@ g = DC + C'A + B'A
 | `quartus/Project.qpf`, `Project.qsf` | Quartus II project and pin assignments |
 | `quartus/Waveform*.vwf` | Functional simulation waveforms |
 | `rtl/student_display.v` | The same design split into separate modules (`counter_mod11`, `mux2ch_4bit`, `seg7_decoder`) with an active-low reset |
-| `docs/` | Block diagram, truth table and K-maps |
+| `docs/` | Block diagram, truth table, counter K-maps, and segment K-maps (`docs/segment-kmaps/`) |
 
 ## Hardware and tools
 
